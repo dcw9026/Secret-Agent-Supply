@@ -5,11 +5,14 @@ html, body {
   width: 100%;
 }
 
-/* Main Wrapper */
 
-div#main-content {
-  width: 960px;
+/* Container */
+
+div.container {
+  max-width: 960px;
+  margin: 0 auto;
 }
+
 
 /* Header Styles */
 
@@ -17,7 +20,12 @@ header {
   background-color: black;
 }
 
-div#branding img{
+div#branding {
+  display: flex;
+  align-items: center;
+}
+
+div#branding img {
   height: 1.5rem;
   margin-left: .5rem;
   margin-right: 1rem;
@@ -25,6 +33,118 @@ div#branding img{
 
 div#branding span {
   text-transform: uppercase;
+  display: inline-block;
+  padding: .66rem 0;
 }
 
+
 /* Showcase Styles */
+
+div#showcase {
+  background: url("../images/moto.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 25rem;
+  width: 100%;
+}
+
+div#headline {
+  background-color: black;
+  max-width: 20rem;
+  position: relative;
+  top: 9rem;
+}
+
+div#headline h1, h4 {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+}
+
+div#headline h1 {
+  font-size: 2rem;
+}
+
+div#headline h4 {
+  padding-bottom: 0.25rem;
+}
+
+
+/* Nav Styles */
+
+nav {
+  background-color: firebrick;
+}
+
+div#nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+div#nav-container ul li {
+  display: inline-block;
+  padding: .75rem 3rem;
+}
+
+
+/* Gallery Styles */
+
+div#gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+div.gallery-item {
+  display: inline-block;
+  border: 4px solid black;
+  max-width: 30%;
+}
+
+div.gallery-item img {
+  height: 9rem;
+  padding: 2rem;
+  width: 80%;
+}
+
+span.description {
+  display: block;
+  background-color: black;
+  padding: 0.5rem 0;
+}
+
+div#business-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  color: black;
+}
+
+div.info {
+  width: 35%;
+}
+
+
+
+span.title {
+  color: white;
+  background-color: black;
+  display: block;
+  padding: 1rem 2rem;
+}
+
+/* Footer Styles */
+
+footer {
+  width: 100%;
+  height: 5rem;
+  background-color: black;
+}
+
+div#copyright {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
