@@ -1,4 +1,4 @@
-html, body {
+  html, body {
   font-size: 18px;
   font-family: Helvetica, sans-serif;
   color: white;
@@ -87,6 +87,18 @@ div#nav-container ul li {
 }
 
 
+/* Menu button for small resolutions */
+
+div#small-screen-nav {
+  display: none;
+}
+
+/* Headline for mobile */
+
+#small-screen-headline {
+  display: none;
+}
+
 /* Gallery Styles */
 
 div#gallery {
@@ -97,7 +109,6 @@ div#gallery {
 }
 
 div.gallery-item {
-  display: inline-block;
   border: 4px solid black;
   max-width: 30%;
 }
@@ -105,7 +116,7 @@ div.gallery-item {
 div.gallery-item img {
   height: 9rem;
   padding: 2rem;
-  width: 80%;
+  max-width: 80%;
 }
 
 span.description {
@@ -126,14 +137,13 @@ div.info {
   width: 35%;
 }
 
-
-
 span.title {
   color: white;
   background-color: black;
   display: block;
   padding: 1rem 2rem;
 }
+
 
 /* Footer Styles */
 
@@ -147,4 +157,87 @@ div#copyright {
   height: 5rem;
   display: flex;
   align-items: center;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+  div.gallery-item {
+    max-width: 47%;
+    width: 47%;
+  }
+  div.info {
+    width: 35%;
+  }
+  div.gallery-item:last-of-type {
+    display: none;
+  }
+  div#nav-container {
+    display: none;
+  }
+  div#small-screen-nav {
+    display: block;
+    padding: .75rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  #branding span{
+    position: absolute;
+    top: -999999rem;
+  }
+  #branding img {
+    padding: 1rem;
+  }
+  div#showcase {
+    height: 15rem;
+  }
+  #headline {
+    display: none;
+  }
+  #small-screen-headline {
+    background-color: black;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  #small-screen-headline h4 {
+    font-size: .77rem;
+  }
+  #small-screen-headline h1 {
+    font-size: 1rem;
+  }
+  div#gallery {
+    display: flex;
+    flex-direction: column;
+  }
+  div.gallery-item {
+    max-width: 90%;
+    margin: 1rem auto;
+    width: 90%;
+  }
+  div.gallery-item:last-of-type {
+    display: block;
+  }
+  div#business-info {
+    display: flex;
+    flex-direction: column;
+  }
+  div.info {
+    margin: .5rem auto;
+    max-width: 90%;
+    width: 90%;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+  }
 }
